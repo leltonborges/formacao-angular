@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-evenly flex-grow-1">
+<div class="d-flex justify-content-evenly flex-grow-1 flex-wrap">
 
-  <app-photo *ngFor="let p of photos" [url]="p.url"
+  <app-photo *ngFor="let p of photos$ | async" [url]="p.url"
              [description]="p.description"></app-photo>
 </div>
