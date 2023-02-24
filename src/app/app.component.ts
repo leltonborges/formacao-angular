@@ -8,18 +8,4 @@ import { Photos } from './core/interface/photo/photo';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
-  private _photos$!: Observable<Photos>;
-
-  constructor(
-    private photoService: PhotosService
-  ) {}
-
-  get photos$(): Observable<Photos> {
-    return this._photos$;
-  }
-
-  ngOnInit(): void {
-    this._photos$ = this.photoService.findByPhotoTouser('flavio');
-  }
-}
+export class AppComponent{}

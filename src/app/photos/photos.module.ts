@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { PhotosRoutingModule } from './photos-routing.module';
 import { PhotoComponent } from './photo/photo.component';
-
+import { PhotosService } from '../core/service/photo/photos.service';
+import { PhotosListComponent } from './photos-list/photos-list.component';
+import { ServiceDefaultModule } from '../core/module/default/service-default.module';
 
 @NgModule({
-  declarations: [PhotoComponent],
-  imports: [
-    CommonModule,
-    PhotosRoutingModule
+  declarations: [PhotoComponent, PhotosListComponent],
+  providers: [
+    PhotosService
   ],
-  exports: [PhotoComponent]
+  imports: [
+    ServiceDefaultModule,
+    PhotosRoutingModule
+  ]
 })
 export class PhotosModule {
 }

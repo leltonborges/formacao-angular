@@ -1,5 +1,3 @@
-<div class="d-flex justify-content-evenly flex-grow-1 flex-wrap">
-
-  <app-photo *ngFor="let p of photos$ | async" [url]="p.url"
-             [description]="p.description"></app-photo>
-</div>
+<main class="container my-2">
+  <router-outlet></router-outlet>
+</main>
