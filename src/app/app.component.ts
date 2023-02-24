@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { PhotosService } from './core/service/photo/photos.service';
-import { Observable } from 'rxjs';
-import { Photos } from './core/interface/photo/photo';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
