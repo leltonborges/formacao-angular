@@ -4,7 +4,6 @@ import { ErrorsRoutingModule } from './errors-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DefaultModule } from '../../core/module/default/default.module';
 
-
 @NgModule({
   declarations: [
     NotFoundComponent
@@ -14,4 +13,4 @@ import { DefaultModule } from '../../core/module/default/default.module';
     ErrorsRoutingModule
   ]
 })
-export class ErrorsModule { }
+export class ErrorsModule {}
