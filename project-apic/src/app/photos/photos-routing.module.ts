@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PhotosListComponent } from './photos-list/photos-list.component';
 
 const routes: Routes = [
-  {
-    path: '',
+{
+    path: ':userName',
     component: PhotosListComponent
   }
 ];

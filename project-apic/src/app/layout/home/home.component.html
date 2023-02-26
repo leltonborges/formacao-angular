@@ -1,7 +1,8 @@
 <p>home works!</p>
 <div>
   <ul>
-    <li><a [routerLink]="['/photos']">photos</a></li>
-        <li><a [routerLink]="['']">home</a></li>
+    <li><a [routerLink]="['/photos', {userName}]">photos</a></li>
+    <li><a [routerLink]="['/photos', userName]">photos 2</a></li>
+    <li><a [routerLink]="['']">home</a></li>
   </ul>
 </div>

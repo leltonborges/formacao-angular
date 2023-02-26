@@ -1,4 +1,7 @@
-<div class="d-flex justify-content-evenly flex-grow-1 flex-wrap">
-  <app-photo *ngFor="let p of photos$ | async" [url]="p.url"
-             [description]="p.description"></app-photo>
-</div>
+<section class="container">
+  <div class="row">
+    <app-photo class="col-md-4 col-xl-3 col-sm-6" *ngFor="let p of photos$ | async"
+               [url]="p.url"
+               [description]="p.description"></app-photo>
+  </div>
+</section>
