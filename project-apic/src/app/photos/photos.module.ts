@@ -5,6 +5,7 @@ import { PhotoComponent } from './photo/photo.component';
 import { PhotosService } from '../core/service/photo/photos.service';
 import { PhotosListComponent } from './photos-list/photos-list.component';
 import { ServiceDefaultModule } from '../core/module/default/service-default.module';
+import { CommonModule as CommonCustomModule } from '../common/common.module';
 
 @NgModule({
   declarations: [PhotoComponent, PhotosListComponent],
@@ -13,7 +14,8 @@ import { ServiceDefaultModule } from '../core/module/default/service-default.mod
   ],
   imports: [
     ServiceDefaultModule,
-    PhotosRoutingModule
+    PhotosRoutingModule,
+    CommonCustomModule
   ]
 })
 export class PhotosModule {
