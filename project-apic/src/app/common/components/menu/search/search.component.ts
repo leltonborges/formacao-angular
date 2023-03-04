@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { Subject, tap } from 'rxjs';
+import { debounceTime, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnDestroy, OnInit{
+export class SearchComponent implements OnDestroy, OnInit {
   @Output('OnSearchPhoto')
   onSearchPhoto = new EventEmitter<string>();
   @Input('value')
@@ -24,7 +24,7 @@ export class SearchComponent implements OnDestroy, OnInit{
 
   ngOnInit(): void {
     this._debounce$
-      // .pipe(debounceTime(3000))
+        .pipe(debounceTime(800))
         .subscribe(value => this.onSearchPhoto.emit(value));
   }
 }

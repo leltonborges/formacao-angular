@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: 'not-found',
     component: NotFoundComponent,
-    loadChildren: () => import('./layout/errors/errors.module').then(m => m.ErrorsModule)
+    loadChildren: () => import('./layout/errors/errors.module').then(m => m.ErrorsModule),
   }
 ];
 
