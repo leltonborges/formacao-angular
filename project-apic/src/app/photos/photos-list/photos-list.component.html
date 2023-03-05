@@ -1,11 +1,15 @@
 <div class="row">
-  <app-search (OnSearchPhoto)="setSearchPhotos($event)" [value]="searchPhotos"></app-search>
+  <app-search (OnSearchPhoto)="setSearchPhotos($event)"
+              [value]="searchPhotos" />
 
-  <ng-template [ngIf]="(photoList | filterByDescription: searchPhotos).length" [ngIfElse]="noPhoto">
-  <app-photo class="col-md-4 col-xl-3 col-sm-6"
-             *ngFor="let p of photoList | filterByDescription: searchPhotos"
-             [url]="p.url"
-             [description]="p.description"></app-photo>
+  <ng-template [ngIf]="(photoList | filterByDescription: searchPhotos).length"
+               [ngIfElse]="noPhoto">
+    <app-photo class="col-md-4 col-xl-3 col-sm-6"
+               *ngFor="let p of photoList | filterByDescription: searchPhotos"
+               [url]="p.url"
+               [description]="p.description" />
+    <app-button [hasMore]="hasMore"
+                (click)="loadPage()" />
   </ng-template>
 </div>
 <ng-template #noPhoto>
