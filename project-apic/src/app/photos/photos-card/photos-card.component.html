@@ -1,0 +1,12 @@
+<figure>
+  <app-photo [url]="photo.url"
+             [description]="photo.description"></app-photo>
+  <div class="text-center">
+    <app-icon class="me-3"
+              [classIcon]="['fas', 'heart']"
+              styleIcon="#C83A1D"
+              [context]="photo.likes"></app-icon>
+    <app-icon [classIcon]="['fas', 'comment']"
+              [context]="photo.comments"></app-icon>
+  </div>
+</figure>

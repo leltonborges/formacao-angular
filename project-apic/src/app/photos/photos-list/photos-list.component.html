@@ -1,0 +1,16 @@
+<div class="row">
+  <app-search (OnSearchPhoto)="setSearchPhotos($event)"
+              [value]="searchPhotos" />
+
+  <ng-template [ngIf]="(photoList | filterByDescription: searchPhotos).length"
+               [ngIfElse]="noPhoto">
+    <app-photos-card class="col-md-4 col-xl-3 col-sm-6"
+               *ngFor="let p of photoList | filterByDescription: searchPhotos"
+               [photo]="p" />
+    <app-button [hasMore]="hasMore"
+                (click)="loadPage()" />
+  </ng-template>
+</div>
+<ng-template #noPhoto>
+  <h3 class="text-center"> Sorry, no photos</h3>
+</ng-template>
