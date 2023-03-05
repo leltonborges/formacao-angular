@@ -8,9 +8,10 @@ import { ServiceDefaultModule } from '../core/module/default/service-default.mod
 import { CommonModule as CommonCustomModule } from '../common/common.module';
 import { ResolverModule } from '../core/resolver/resolver.module';
 import { PhotoListResolver } from '../core/resolver/photo/photo-list.resolver';
+import { PhotosCardComponent } from './photos-card/photos-card.component';
 
 @NgModule({
-  declarations: [PhotoComponent, PhotosListComponent],
+  declarations: [PhotoComponent, PhotosListComponent, PhotosCardComponent],
   providers: [
     PhotoService,
     PhotoListResolver

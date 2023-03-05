@@ -12,7 +12,6 @@ export class PhotosListComponent implements OnInit {
   private _userName!: string;
   private _currentPage: number = 1;
   private _hasMore: boolean = false;
-  private _filter: string = '';
   private _searchPhotos: string = '';
   photoList!: Photos;
 
@@ -23,10 +22,6 @@ export class PhotosListComponent implements OnInit {
 
   get hasMore(): boolean {
     return this._hasMore;
-  }
-
-  get filter(): string {
-    return this._filter;
   }
 
   get searchPhotos(): string {
@@ -47,7 +42,7 @@ export class PhotosListComponent implements OnInit {
     this.photoService.findByPhotoPageToUser(this._userName, ++this._currentPage)
         .subscribe({
           next: pts => {
-            this._filter = '';
+            this._searchPhotos = '';
             this.photoList.push(...pts);
             if (!pts.length) this._hasMore = false;
           }

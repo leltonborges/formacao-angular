@@ -11,7 +11,6 @@ export class SearchComponent implements OnDestroy, OnInit {
   onSearchPhoto = new EventEmitter<string>();
   @Input('value')
   value!: string;
-
   private _debounce$: Subject<string> = new Subject<string>();
 
   get debounce$(): Subject<string> {
